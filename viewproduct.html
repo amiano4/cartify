@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Cartify</title>
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <div class="cartify">
+                <i class="ri-shopping-cart-line"></i>
+                Cartify
+            </div>
+            <div class="nav">
+                <form action="">
+                    <input type="text" placeholder="Search products">
+                    <button type="submit">
+                        <i class="ri-search-line"></i>
+                    </button>
+                    <button type="button">
+                        <i class="ri-shopping-cart-2-fill"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="categories">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="javascript:;">|</a></li>
+                <li><a href="#electronics">Electronics</a></li>
+                <li><a href="#jewelery">Jewelery</a></li>
+                <li><a href="#men's clothing">Men's Clothing</a></li>
+                <li><a href="#women's clothing">Women's Clothing</a></li>
+            </ul>
+        </div>
+        
+        < class="content-body">
+        <div>
+            
+            fetch('https://fakestoreapi.com/products/1')
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+        
+        </div>
+            title:'Mens clothing jacket',
+            price:'$55.99',
+            category:'mens cloth',
+            description:'Cloth',
+            
+
+        <div class="footer">
+            &copy; Cartify 2022
+        </div>
+    </div>
+    <!-- <script src="app.js"></script> -->
+</body>
+</html>

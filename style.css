@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: all ease .3s;
+}
+
+#app {
+    height: 100vh;
+    /* background-color: #e1e1c6; */
+    display: flex;
+    flex-flow: column;
+    /* background-image: url('shop4.jpg'); */
+    background-size: cover;
+}
+
+.cartify {
+    font-weight: 700;
+    font-size: 1.35rem;
+    align-self: center;
+}
+
+.header {
+    padding: 0 50px;
+    box-shadow: 0 5px 5px 0 #9b9b9b70;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    align-items: stretch;
+    background: #fff;
+}
+
+.header .nav form {
+    display: flex;
+}
+
+.header .nav input {
+    border: none;
+    margin: 0;
+    padding: .5rem;
+    font-size: .9rem;
+    width: 20rem;
+    border-radius: 0;
+    border-right: 1px solid #555;
+    margin: .5rem 0;
+}
+
+.header .nav input::placeholder {
+    font-style: italic;
+}
+
+.header .nav input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.header .nav button {
+    padding: 1rem 1.5rem;
+    border: 0;
+    background-color: transparent;
+    color: #555;
+    /* color: #fff; */
+}
+.header .nav button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+.categories ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0aa8e5;
+}
+
+.categories li {
+    padding: 1.5rem;
+    display: inline-block;
+}
+
+.categories a {
+    font-size: .85rem;
+    text-decoration: none;
+    /* color: #555; */
+    color: #fff;
+    font-weight: 500;
+}
+
+.categories a:hover {
+    text-decoration: underline;
+}
+
+.pic {
+    height: 400px;
+    background-image: url("shopping.jpg");
+    background-size: cover;
+}
+
+.categories-wrap {
+    height: 100%;
+    background-color: #5a59595e;
+}
+
+.content-body {
+    padding: 1rem 50px;
+}
+
+.products-label {
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 1rem;
+}
+
+.products-list {
+    /* display: grid;
+    grid-template-columns: 25% 25% 25% 25%; */
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.products-list .item-wrap {
+    flex: 1;
+    min-height: 280px;
+    min-width: 230px;
+    /* background-color: red; */
+    /* display: flex;
+    flex-flow: column; */
+    /* border-bottom: 1px solid #999; */
+    /* box-shadow: 0 0 5px 0 rgba(153, 153, 153, 0.348); */
+}
+
+.products-list .item {
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    /* flex: 1; */
+    /* justify-content: stretch; */
+    /* align-items: stretch; */
+    /* background-color: red; */
+    display: flex;
+    flex-flow: column;
+    /* border-bottom: 1px solid #999; */
+    box-shadow: 0 0 8px 0 rgb(153 153 153 / 25%);
+}
+
+.products-list .item .img {
+    height: 200px;
+    background: #fff;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    padding: .5rem;
+    justify-content: center;
+
+    /* justify-self: center; */
+}
+
+.products-list .item .img img {
+    height: 200px;
+    /* transform */
+    /* width: 230px; */
+    width: auto;
+    max-width: 100%;
+    /* margin: 0 auto; */
+    /* object-fit: cover !important;
+    object-position: center !important; */
+}
+
+.products-list .item .label {
+    /* padding: .5rem; */
+    font-size: .75rem;
+    color: #888;
+    flex-grow: 5;
+}
+
+.products-list .item .label span {
+    display: block;
+    padding: .5rem 1rem;
+    padding-bottom: 0;
+}
+
+.label .name {
+    font-weight: 600;
+}
+
+.label .price::before{
+    display: inline-block;
+    content: '$';
+    margin-right: .5rem;
+}
+.products-list .p-actions {
+    align-self: flex-end;
+    justify-self: end;
+    display: flex;
+    margin-top: .7rem;
+}
+
+.products-list .p-actions .pa-btn {
+    border: none;
+    padding: .8rem 1.5rem;
+    background-color: transparent;
+    color: #555;
+}
+
+.products-list .p-actions .pa-btn:hover {
+    background-color: #3392e5;
+    color: #fff;
+}
+
+.products-list .p-actions .pa-btn.place-order {
+    flex-grow: 1;
+    font-weight: 600;
+}
+
+.p-subcategory {
+    font-size: .9rem;
+    color: #888;
+    text-transform: capitalize;
+}
+
+.p-subcategory::before {
+    content: '\2b9a';
+    display: inline-block;
+    margin: 0 .5rem;
+}
