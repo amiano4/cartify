@@ -102,7 +102,7 @@ function openViewProductModal(product) {
         <div class="modal-body">
             <div class="p-grid">
                 <div class="p-view">
-                    <img src="shopping.jpg" alt="img">
+                    <img src="${product.image}" alt="img">
                 </div>
                 <div class="p-details">
                     <span class="name">${product.title}</span>
@@ -113,13 +113,11 @@ function openViewProductModal(product) {
             <div class="checkout-details">
                 <div class="quantity">
                     <div>Quantity</div>
-                    <button type="button"><</button>
-                    <input type="number" value="4">
-                    <button type="button">></button>
+                    <button type="button" class="c-btn less"><</button>
+                    <input type="number" class="quantity-counter" value="1" step="1">
+                    <button type="button" class="c-btn more">></button>
                 </div>
-                <div class="total">
-                    <div>Total amount: 12 USD</div>
-                </div>
+                <div class="total">Total price: ${product.price} USD</div>
             </div>
         </div>
         <div class="modal-footer">
@@ -133,6 +131,21 @@ function openViewProductModal(product) {
         </div>
     </div>
     `;
+
+    modal.querySelectorAll('.c-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const counter = modal.querySelector('.quantity-counter');
+
+            if(btn.classList.contains('less')) {
+                counter.value = parseInt(counter.value) - 1 < 1 ? 1 : parseInt(counter.value) - 1;
+            }
+            else if(btn.classList.contains('more')) {
+                counter.value = parseInt(counter.value) + 1;
+            }
+
+            modal.querySelector('.total').innerHTML = `Total price: ${(parseInt(counter.value) * product.price).toFixed(2)} USD`;
+        })
+    })
 
     modal.querySelector('.modal-close').addEventListener('click', function() {
         modal.remove();

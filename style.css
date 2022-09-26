@@ -8,10 +8,8 @@
 
 #app {
     height: 100vh;
-    /* background-color: #e1e1c6; */
     display: flex;
     flex-flow: column;
-    /* background-image: url('shop4.jpg'); */
     background-size: cover;
 }
 
@@ -83,7 +81,6 @@
 .categories a {
     font-size: .85rem;
     text-decoration: none;
-    /* color: #555; */
     color: #fff;
     font-weight: 500;
 }
@@ -94,7 +91,7 @@
 
 .pic {
     height: 400px;
-    background-image: url("shopping.jpg");
+    background-image: url("assets/shopping.jpg");
     background-size: cover;
 }
 
@@ -115,8 +112,6 @@
 }
 
 .products-list {
-    /* display: grid;
-    grid-template-columns: 25% 25% 25% 25%; */
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
@@ -127,23 +122,13 @@
     min-height: 280px;
     min-width: 230px;
     text-decoration: none;
-    /* background-color: red; */
-    /* display: flex;
-    flex-flow: column; */
-    /* border-bottom: 1px solid #999; */
-    /* box-shadow: 0 0 5px 0 rgba(153, 153, 153, 0.348); */
 }
 
 .products-list .item {
     height: 100%;
     width: 100%;
-    /* flex: 1; */
-    /* justify-content: stretch; */
-    /* align-items: stretch; */
-    /* background-color: red; */
     display: flex;
     flex-flow: column;
-    /* border-bottom: 1px solid #999; */
     box-shadow:0 0 8px 0 rgb(141 138 138 / 55%);
 }
 
@@ -155,23 +140,15 @@
     display: flex;
     padding: .5rem;
     justify-content: center;
-
-    /* justify-self: center; */
 }
 
 .products-list .item .img img {
     height: 100%;
-    /* transform */
-    /* width: 230px; */
     width: auto;
     max-width: 100%;
-    /* margin: 0 auto; */
-    /* object-fit: cover !important;
-    object-position: center !important; */
 }
 
 .products-list .item .label {
-    /* padding: .5rem; */
     font-size: .75rem;
     color: #888;
     flex-grow: 5;
@@ -285,8 +262,6 @@
 
 .p-view img {
     height: 100%;
-    /* transform */
-    /* width: 230px; */
     width: auto;
     max-width: 100%;
 }
@@ -315,14 +290,11 @@
     display: block;
     font-size: .75rem;
     color: #777;
-    /* margin-bottom: 1.5rem; */
 }
 
 .p-details .price .p {
     padding: .3rem .75rem;
-    /* background-color: #067ba9; */
     border: 1px solid #888;
-    /* color: #fff; */
 }
 
 .checkout-details {
@@ -352,7 +324,6 @@
     border: none;
     border: 1px solid #555;
     background-color: transparent;
-    /* color: #fff; */
     font-size: 1rem;
 }
 
@@ -378,14 +349,11 @@
 
 .modal .p-actions {
     text-align: right;
-    /* margin-top: .5rem; */
 }
 
 .modal .p-actions a {
     text-decoration: none;
-    /* font-size: .85rem; */
     color: #333;
-    /* font-weight: 600; */
     padding: .5rem 1.85rem;
     display: inline-block;
 }
