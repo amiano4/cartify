@@ -126,6 +126,7 @@
     flex: 1;
     min-height: 280px;
     min-width: 230px;
+    text-decoration: none;
     /* background-color: red; */
     /* display: flex;
     flex-flow: column; */
@@ -136,7 +137,6 @@
 .products-list .item {
     height: 100%;
     width: 100%;
-    /* background-color: red; */
     /* flex: 1; */
     /* justify-content: stretch; */
     /* align-items: stretch; */
@@ -144,7 +144,7 @@
     display: flex;
     flex-flow: column;
     /* border-bottom: 1px solid #999; */
-    box-shadow: 0 0 8px 0 rgb(153 153 153 / 25%);
+    box-shadow:0 0 8px 0 rgb(141 138 138 / 55%);
 }
 
 .products-list .item .img {
@@ -160,7 +160,7 @@
 }
 
 .products-list .item .img img {
-    height: 200px;
+    height: 100%;
     /* transform */
     /* width: 230px; */
     width: auto;
@@ -226,4 +226,183 @@
     content: '\2b9a';
     display: inline-block;
     margin: 0 .5rem;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background-color: #55555578;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal .modal-content {
+    width: 552px;
+    min-height: 400px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 #555;
+}
+
+.modal .modal-content > * {
+    padding: 20px;
+    position: relative;
+}
+
+.modal .modal-close {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    inset: 1rem 1rem auto auto;
+}
+
+.modal .modal-close::before {
+    content: '\2573';
+    display: block;
+}
+
+.modal .modal-close:hover::before {
+    color: #888;
+}
+
+.modal .modal-title {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.p-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.p-view {
+    height: 200px;
+    padding: .5rem;
+}
+
+.p-view img {
+    height: 100%;
+    /* transform */
+    /* width: 230px; */
+    width: auto;
+    max-width: 100%;
+}
+
+.p-details {
+    padding: .5rem 1rem;
+}
+
+.p-details .name {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.p-details .description {
+    display: block;
+    font-weight: 400;
+    font-size: .85rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 120%;
+}
+
+.p-details .description {
+    display: block;
+    font-size: .75rem;
+    color: #777;
+    /* margin-bottom: 1.5rem; */
+}
+
+.p-details .price .p {
+    padding: .3rem .75rem;
+    /* background-color: #067ba9; */
+    border: 1px solid #888;
+    /* color: #fff; */
+}
+
+.checkout-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.checkout-details .total {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.checkout-details .quantity > div {
+    padding: .25rem;
+    font-weight: 600;
+    font-size: .85rem;
+    text-align: center;
+    color: #555;
+}
+
+.checkout-details .quantity button {
+    padding: .4rem .85rem;
+    border-radius: 0;
+    border: none;
+    border: 1px solid #555;
+    background-color: transparent;
+    /* color: #fff; */
+    font-size: 1rem;
+}
+
+.checkout-details .quantity button:hover {
+    color: #fff;
+    background-color: #555;
+}
+
+.checkout-details .quantity input {
+    border: none;
+    width: 7rem;
+    text-align: center;
+}
+
+.checkout-details .quantity input::-webkit-inner-spin-button,
+.checkout-details .quantity input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.checkout-details .quantity input:focus {
+    outline: none;
+}
+
+.modal .p-actions {
+    text-align: right;
+    /* margin-top: .5rem; */
+}
+
+.modal .p-actions a {
+    text-decoration: none;
+    /* font-size: .85rem; */
+    color: #333;
+    /* font-weight: 600; */
+    padding: .5rem 1.85rem;
+    display: inline-block;
+}
+
+.modal .p-actions a.checkout:hover {
+    text-decoration: underline;
+}
+
+.modal .p-actions a.cart {
+    background-color: #0aa8e5;
+    color: #fff;
+}
+
+.modal .p-actions a.cart:hover {
+    background-color: #067ba9;
+}
+
+.modal .modal-footer {
+    border-top: 1px solid #c7c7c7;
 }
