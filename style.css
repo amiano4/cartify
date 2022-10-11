@@ -341,6 +341,7 @@
 .checkout-details .quantity input::-webkit-inner-spin-button,
 .checkout-details .quantity input::-webkit-outer-spin-button {
     -webkit-appearance: none;
+    appearance: none;
 }
 
 .checkout-details .quantity input:focus {
