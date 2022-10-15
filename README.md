@@ -8,5 +8,6 @@ A simple e-commerce website using an API
 - This website is using the fakestoreapi
 
 ### Members
+- Almario Miano
 - Froilan Roxas
 - Aljon Mangubat
