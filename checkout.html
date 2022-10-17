@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="shortcut icon" href="assets/cart.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Cartify</title>
+    <title>Cartify - Checkout</title>
 </head>
 <body>
     <div id="app">
@@ -65,11 +65,67 @@
             <div class="products-list"></div>
         </div> -->
 
-        <div class="container-md">
+        <div class="container-md checkout_item">
             <div class="row">
                 <div class="col-12 products-label mt-3">Checkout</div>
             </div>
-            <div class="row products-list g-5"></div>
+                
+        </div>
+
+        <div class="container-md">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form id="form">
+                        <h4 class="border-bottom my-3">Customer information</h4>
+                        <div class="row">
+                            <div class="col-sm-6 mb-4">
+                                <label for="fname">First Name</label>
+                                <input class="form-control" type="text" name="fname" id="fname" required>
+                            </div>
+                            <div class="col-sm-6 mb-4">
+                                <label for="lname">Last Name</label>
+                                <input class="form-control" type="text" name="lname" id="lname" required>
+                            </div>
+                            <div class="col-sm-6 mb-4">
+                                <label for="gender">Gender</label>
+                                <select name="gender" id="gender" class="form-control" required>
+                                    <option value="" selected disabled>-</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 mb-4">
+                                <label for="birthday">Birthday</label>
+                                <input class="form-control" type="date" name="birthday" id="birthday" required>
+                            </div>
+                            <div class="col-sm-12 mb-4">
+                                <label for="email">Email address</label>
+                                <input class="form-control" type="text" name="email" id="email" required>
+                            </div>
+                            <div class="col-sm-12 mb-4">
+                                <label for="contact">Contact Number</label>
+                                <input class="form-control" type="text" name="contact" id="contact" required>
+                            </div>
+                            <div class="col-sm-12 mb-4">
+                                <label for="residential">Residential address</label>
+                                <input class="form-control" type="text" name="residential" id="residential" required>
+                            </div>
+                            <div class="col-12 my-2">
+                                <div class="text-end">
+                                    Amount to pay:
+                                    <span class="badge bg-success fs-6 amounttopay">100</span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary w-100">
+                                    SUBMIT
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
         </div>
 
         <div class="footer">
@@ -79,5 +135,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- <script src="app.js"></script> -->
+    <script src="./modalify.js"></script>
+    <script src="./checkout_script.js"></script>
 </body>
 </html>

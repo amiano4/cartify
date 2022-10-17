@@ -92,6 +92,15 @@ function displayProducts(category = "") {
                     openViewProductModal(product, item);
                 })
 
+                
+                item.querySelector('.checkout').addEventListener('click', function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    
+                    localStorage.setItem('checkout', product.id);
+                    open('checkout.html');
+                });
+
                 item.querySelector('.add-to-cart').addEventListener('click', function(event) {
                     event.preventDefault();
                     event.stopPropagation();
@@ -240,6 +249,13 @@ function openViewProductModal(product, itemElement) {
         });
     }
 
+    modal.querySelector('a.checkout').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        localStorage.setItem('checkout', product.id);
+        open('checkout.html'); 
+    });
+
     document.getElementById('productContent').append(modal);
     myModal.show();
 }
@@ -258,3 +274,7 @@ function addtocart(item) {
 
     return true;
 }
+
+document.querySelector('.cart').addEventListener('click', function() {
+    open('checkout.html');
+})
